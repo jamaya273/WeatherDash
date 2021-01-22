@@ -1,0 +1,21 @@
+.weatherTitle{
+    background-color: lightblue;
+    width: 100% ;
+    text-align: center;
+}
+
+.card-img-bottom{
+    width: 150px;
+    height: 50px;
+    margin-top: 14px;
+    margin-left: 5px;
+}
+
+.card-text{
+    font-size: smaller;
+}
+
+
+.cardForecast{
+    background-color: aliceblue;
+}
