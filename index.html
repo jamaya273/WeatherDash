@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Weather Dashboard</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,10 +26,13 @@
       <div class="col-3">
 
         <h5 class="m-2">Search for a City:</h5>
+
         <div class="input-group">
-          <input type="text" class="form-control" name="term" id="term" placeholder="">
+          <div class="">
+            <input type="text" class="form-control" name="cityWeather" id="cityWeather" placeholder="City">
+          </div>
           <span class="input-group-btn">
-            <button class="btn btn-primary" type="button">Go</button>
+            <button class="btn btn-primary" type="submit" id="submit">Go</button>
           </span>
         </div>
 
@@ -52,75 +55,75 @@
 
 
       <div class="col-9">
-        <div clas="container my-2">
+        <div clas="containerCity my-2">
 
-          <div class="card">
+          <div class="card mt-1">
 
-            <div class="card-body row">
-              <h2 class="card-title">Atlanta (01/21/2021)</h2>
-              <img class="card-img-bottom" data-src="holder.js/100x180/?text=Image cap" alt="Icon">
+            <div class="card-body row" id="cityCurrent">
+              <!-- <h2 class="card-title">Atlanta (01/21/2021)</h2>
+              <img class="card-img-bottom" data-src="holder.js/100x180/?text=Image cap" alt="Icon"> -->
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperature</li>
+            <ul class="list-group list-group-flush" id="weatherCurrent">
+              <!-- <li class="list-group-item">Temperature</li>
               <li class="list-group-item">Humidity</li>
               <li class="list-group-item">Wind Speed</li>
-              <li class="list-group-item">UV Index</li>
+              <li class="list-group-item">UV Index</li> -->
             </ul>
           </div>
 
 
         </div>
 
-        <div class="container mt-5"></div>
+        <div class="containerForecast mt-5"></div>
 
         <h2 class="card-title">5-Day Forecast:</h2>
 
-        <div class="card-group">
-          <div class="cardForecast m-2">
+        <div class="card-group" id="weatherForecast">
+          <div class="cardForecast m-2 bg-primary text-white rounded">
             <div class="card-body">
               <h5 class="card-title mb-4">01/22/2021</h5>
               <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
               <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
               <p class="card-text">Humidity: 43%</p>
             </div>
-          </div> 
+          </div>
 
-          <div class="cardForecast m-2">
+          <div class="cardForecast m-2 bg-primary text-white rounded">
             <div class="card-body">
               <h5 class="card-title mb-4">01/23/2021</h5>
               <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
               <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
               <p class="card-text">Humidity: 43%</p>
             </div>
-          </div> 
+          </div>
 
-          <div class="cardForecast m-2">
+          <div class="cardForecast m-2 bg-primary text-white rounded">
             <div class="card-body">
               <h5 class="card-title mb-4">01/24/2021</h5>
               <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
               <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
               <p class="card-text">Humidity: 43%</p>
             </div>
-          </div> 
+          </div>
 
 
-          <div class="cardForecast m-2">
+          <div class="cardForecast m-2 bg-primary text-white rounded">
             <div class="card-body">
               <h5 class="card-title mb-4">01/25/2021</h5>
               <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
               <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
               <p class="card-text">Humidity: 43%</p>
             </div>
-          </div> 
+          </div>
 
-          <div class="cardForecast m-2">
+          <div class="cardForecast m-2 bg-primary text-white rounded">
             <div class="card-body">
               <h5 class="card-title mb-4">01/26/2021</h5>
               <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
               <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
               <p class="card-text ">Humidity: 43%</p>
             </div>
-          </div> 
+          </div>
 
         </div>
 
@@ -144,6 +147,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./script.js"></script>
 </body>
 
