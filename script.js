@@ -35,7 +35,7 @@ function callAPIs(cityWeather, todayDate) {
     $("#cityCurrent").empty();
     $("#cityCurrent").append(cityName);
 
-    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + cityWeather + "&appid=df5e87f9ee23e7154e2a653c6f5aeb16&units=imperial"
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityWeather + "&appid=df5e87f9ee23e7154e2a653c6f5aeb16&units=imperial"
     $.ajax({
         url: url,
         method: "GET"
@@ -47,7 +47,7 @@ function callAPIs(cityWeather, todayDate) {
         var latVal = response.coord.lat;
         var lonVal = response.coord.lon;
         var iconVal = response.weather[0].icon
-        var url = "http://api.openweathermap.org/data/2.5/uvi?lat=" + latVal + "&lon=" + lonVal + "&appid=df5e87f9ee23e7154e2a653c6f5aeb16"
+        var url = "https://api.openweathermap.org/data/2.5/uvi?lat=" + latVal + "&lon=" + lonVal + "&appid=df5e87f9ee23e7154e2a653c6f5aeb16"
         $.ajax({
             url: url,
             method: "GET"
@@ -58,7 +58,7 @@ function callAPIs(cityWeather, todayDate) {
         })
     })
 
-    var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityWeather + "&appid=df5e87f9ee23e7154e2a653c6f5aeb16&units=imperial"
+    var url = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityWeather + "&appid=df5e87f9ee23e7154e2a653c6f5aeb16&units=imperial"
     $.ajax({
         url: url,
         method: "GET"
@@ -72,7 +72,7 @@ function callAPIs(cityWeather, todayDate) {
 
 function dispCurrent(tempVal, humiVal, windVal, uvinVal, iconVal) {
     // <img class="card-img-bottom" data-src="holder.js/100x180/?text=Image cap" alt="Icon"></img>
-    var iconurl = "http://openweathermap.org/img/w/" + iconVal + ".png";
+    var iconurl = "https://openweathermap.org/img/w/" + iconVal + ".png";
     console.log(iconurl);
     var iconCurr = $("<img>").attr("src", iconurl).attr("alt", "Icon")
     $("#cityCurrent").append(iconCurr);
@@ -103,7 +103,7 @@ function dispForecast(arrFcast) {
         var cardFcast = $("<div>").attr("class", "cardForecast m-2 bg-primary text-white rounded");
         var cardBody = $("<div>").attr("class", "card-body");
         var cardTitle = $("<h5>").text(moment.unix(arrFcast[(8 * i) - 1].dt).format("MM/DD/YYYY")).attr("class", "card-title mb-4");
-        var iconurl = "http://openweathermap.org/img/w/" + arrFcast[(8 * i) - 1].weather[0].icon + ".png";
+        var iconurl = "https://openweathermap.org/img/w/" + arrFcast[(8 * i) - 1].weather[0].icon + ".png";
         var iconFcast = $("<img>").attr("src", iconurl).attr("alt", "Icon")
         var cardTemp = $("<p>").text("Temp: " + arrFcast[(8 * i) - 1].main.temp + " " + String.fromCharCode(176) + "F").attr("class", "card-text mb-1 mt-4");
         var cardHumi = $("<p>").text("Humidity: " + arrFcast[(8 * i) - 1].main.humidity + " %").attr("class", "card-text");
