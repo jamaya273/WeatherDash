@@ -19,3 +19,9 @@
 .cardForecast{
     background-color: aliceblue;
 }
+
+.fa-search{
+    width: 38px;
+    height: 38px;
+    padding: 0px;
+}

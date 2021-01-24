@@ -9,6 +9,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,26 +34,13 @@
             <input type="text" class="form-control" name="cityWeather" id="cityWeather" placeholder="City">
           </div>
           <span class="input-group-btn">
-            <button class="btn btn-primary" type="submit" id="submit">Go</button>
+            <button class="btn btn-primary fas fa-search" type="submit" id="submit"></button>
           </span>
         </div>
 
-        <ul class="list-group mt-3">
-          <li class="list-group-item">City 1</li>
-          <li class="list-group-item">City 2</li>
-          <li class="list-group-item">City 3</li>
-          <li class="list-group-item">City 4</li>
-          <li class="list-group-item">City 5</li>
-          <li class="list-group-item">City 6</li>
-          <li class="list-group-item">City 7</li>
-          <li class="list-group-item">City 8</li>
-          <li class="list-group-item">City 9</li>
-          <li class="list-group-item">City 10</li>
-        </ul>
-
+        <div class="list-group mt-3" id="cityList"> </div>
 
       </div>
-
 
 
       <div class="col-9">
@@ -78,54 +67,7 @@
 
         <h2 class="card-title">5-Day Forecast:</h2>
 
-        <div class="card-group" id="weatherForecast">
-          <div class="cardForecast m-2 bg-primary text-white rounded">
-            <div class="card-body">
-              <h5 class="card-title mb-4">01/22/2021</h5>
-              <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
-              <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
-              <p class="card-text">Humidity: 43%</p>
-            </div>
-          </div>
-
-          <div class="cardForecast m-2 bg-primary text-white rounded">
-            <div class="card-body">
-              <h5 class="card-title mb-4">01/23/2021</h5>
-              <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
-              <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
-              <p class="card-text">Humidity: 43%</p>
-            </div>
-          </div>
-
-          <div class="cardForecast m-2 bg-primary text-white rounded">
-            <div class="card-body">
-              <h5 class="card-title mb-4">01/24/2021</h5>
-              <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
-              <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
-              <p class="card-text">Humidity: 43%</p>
-            </div>
-          </div>
-
-
-          <div class="cardForecast m-2 bg-primary text-white rounded">
-            <div class="card-body">
-              <h5 class="card-title mb-4">01/25/2021</h5>
-              <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
-              <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
-              <p class="card-text">Humidity: 43%</p>
-            </div>
-          </div>
-
-          <div class="cardForecast m-2 bg-primary text-white rounded">
-            <div class="card-body">
-              <h5 class="card-title mb-4">01/26/2021</h5>
-              <img class="card-img-bottom" data-src="holder.js/100x180/" alt="Icon">
-              <p class="card-text mb-1 mt-4">Temp: 86.84 F</p>
-              <p class="card-text ">Humidity: 43%</p>
-            </div>
-          </div>
-
-        </div>
+        <div class="card-group" id="weatherForecast"></div>
 
       </div>
 
@@ -133,11 +75,9 @@
 
 
   </div>
-  </div>
-  </div>
 
 
-  </div>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
