@@ -23,9 +23,7 @@ $("#submit").click(function (event) {
     DispCityHistory(histCities);
 });
 
-$(".list-group-item").click(function () {
-    alert("clicked " + JSON.stringify($(this)));
-});
+
 
 
 
@@ -114,6 +112,11 @@ function dispForecast(arrFcast) {
 }
 
 
+
+
+
+
+
 function DispCityHistory(histCities) {
 
     var uniqueCities = [];
@@ -130,7 +133,22 @@ function DispCityHistory(histCities) {
 
     $("#cityList").empty();
     for (var i = 0; i < len; i++) {
-        var lcty = $("<button>").attr("type", "button").attr("class", "list-group-item list-group-item-action").attr("id", "city" + i).text(uniqueCities[i]);
+        var lcty = $("<button>")
+            .attr("type", "button")
+            .attr("class", "list-group-item list-group-item-action")
+            .attr("id", i)
+            .text(uniqueCities[i])
+            .click(function () {
+                //alert(this.innerHTML);
+                var cityWeather = this.innerHTML;
+                var todayDate = moment().format('L');
+                callAPIs(cityWeather, todayDate);
+                AddCitytoHist(cityWeather);
+                var histCities = JSON.parse(localStorage.getItem("Cities"));
+                DispCityHistory(histCities);
+                $("#cityWeather").attr("placeholder","City");
+            });
+
         $("#cityList").append(lcty);
     }
 
